@@ -1,5 +1,10 @@
 using Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using Repositories;
+using Repositories.Interfaces;
+using Services;
+using Services.Interfaces;
+
 namespace Real_TimeTaskManagement
 {
     public class Program
@@ -18,6 +23,8 @@ namespace Real_TimeTaskManagement
             builder.Services.AddDbContext<ApplicationDbContext>
                 (options => options.UseSqlServer(builder.Configuration.GetConnectionString("mssqllocaldb")));
 
+            builder.Services.AddScoped<ITaskRepository, TaskRepository>();
+            builder.Services.AddScoped<ITaskService, TaskService>();
 
             var app = builder.Build();
 
@@ -29,12 +36,14 @@ namespace Real_TimeTaskManagement
             }
 
             app.UseHttpsRedirection();
+            app.UseRouting();
 
             app.UseAuthorization();
 
-
-            app.MapControllers();
-
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
             app.Run();
         }
     }

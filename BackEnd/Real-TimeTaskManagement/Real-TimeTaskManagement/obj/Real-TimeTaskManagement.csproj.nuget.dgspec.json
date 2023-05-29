@@ -156,6 +156,12 @@
             "projectReferences": {
               "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Infrastructure\\Infrastructure.csproj": {
                 "projectPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Infrastructure\\Infrastructure.csproj"
+              },
+              "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Repositories\\Repositories.csproj": {
+                "projectPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Repositories\\Repositories.csproj"
+              },
+              "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Services\\Services.csproj": {
+                "projectPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Services\\Services.csproj"
               }
             }
           }
@@ -178,7 +184,7 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[6.0.16, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -200,6 +206,124 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Repositories\\Repositories.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Repositories\\Repositories.csproj",
+        "projectName": "Repositories",
+        "projectPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Repositories\\Repositories.csproj",
+        "packagesPath": "C:\\Users\\javah\\.nuget\\packages\\",
+        "outputPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Repositories\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\javah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Infrastructure\\Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Services\\Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Services\\Services.csproj",
+        "projectName": "Services",
+        "projectPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\javah\\.nuget\\packages\\",
+        "outputPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\javah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Repositories\\Repositories.csproj": {
+                "projectPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Repositories\\Repositories.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
