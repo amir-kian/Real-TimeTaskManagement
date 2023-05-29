@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskModel } from 'src/app/models/task';
 import { TaskService } from '../../services/task.service';
+import { SignalrService  } from '../../services/signalr.service';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { TaskService } from '../../services/task.service';
 })
 export class TaskListComponent implements OnInit {
 
-  constructor(private taskService: TaskService) { }
+  constructor(private taskService: TaskService,private signalRService: SignalrService) { }
 
   tasks: TaskModel[] | undefined;
 
@@ -19,11 +20,15 @@ export class TaskListComponent implements OnInit {
     this.taskService.getTasks().subscribe((data: TaskModel[]) => {
       this.tasks = data;
     });
+    this.signalRService.startConnection();
+
   }
   deleteTask(taskId: number) {
     if (confirm('Are you sure you want to delete this task?')) {
       this.taskService.deleteTask(taskId).subscribe(() => {
         this.tasks = this.tasks!.filter(task => task.id !== taskId);
+        this.signalRService.taskDeleted(taskId);
+
       });
     }
   }

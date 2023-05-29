@@ -35,6 +35,8 @@ namespace Real_TimeTaskManagement
                            .AllowAnyMethod();
                 });
             });
+            builder.Services.AddSignalR();
+
 
             var app = builder.Build();
 
@@ -54,7 +56,9 @@ namespace Real_TimeTaskManagement
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+              //  endpoints.MapHub<TaskHub>("/taskhub"); // add this line to map the hub endpoint
             });
+
             app.Run();
         }
     }
