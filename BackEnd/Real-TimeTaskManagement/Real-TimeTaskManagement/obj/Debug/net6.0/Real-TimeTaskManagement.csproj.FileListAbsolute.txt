@@ -69,3 +69,9 @@ E:\development\Real-TimeTaskManagement\Real-TimeTaskManagement\BackEnd\Real-Time
 E:\development\Real-TimeTaskManagement\Real-TimeTaskManagement\BackEnd\Real-TimeTaskManagement\Real-TimeTaskManagement\obj\Debug\net6.0\Real-TimeTaskManagement.pdb
 E:\development\Real-TimeTaskManagement\Real-TimeTaskManagement\BackEnd\Real-TimeTaskManagement\Real-TimeTaskManagement\obj\Debug\net6.0\Real-TimeTaskManagement.genruntimeconfig.cache
 E:\development\Real-TimeTaskManagement\Real-TimeTaskManagement\BackEnd\Real-TimeTaskManagement\Real-TimeTaskManagement\obj\Debug\net6.0\ref\Real-TimeTaskManagement.dll
+E:\development\Real-TimeTaskManagement\Real-TimeTaskManagement\BackEnd\Real-TimeTaskManagement\Real-TimeTaskManagement\bin\Debug\net6.0\Microsoft.AspNet.SignalR.Core.dll
+E:\development\Real-TimeTaskManagement\Real-TimeTaskManagement\BackEnd\Real-TimeTaskManagement\Real-TimeTaskManagement\bin\Debug\net6.0\Microsoft.Owin.dll
+E:\development\Real-TimeTaskManagement\Real-TimeTaskManagement\BackEnd\Real-TimeTaskManagement\Real-TimeTaskManagement\bin\Debug\net6.0\Microsoft.Owin.Security.dll
+E:\development\Real-TimeTaskManagement\Real-TimeTaskManagement\BackEnd\Real-TimeTaskManagement\Real-TimeTaskManagement\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\development\Real-TimeTaskManagement\Real-TimeTaskManagement\BackEnd\Real-TimeTaskManagement\Real-TimeTaskManagement\bin\Debug\net6.0\Owin.dll
+E:\development\Real-TimeTaskManagement\Real-TimeTaskManagement\BackEnd\Real-TimeTaskManagement\Real-TimeTaskManagement\bin\Debug\net6.0\System.Net.WebSockets.WebSocketProtocol.dll
