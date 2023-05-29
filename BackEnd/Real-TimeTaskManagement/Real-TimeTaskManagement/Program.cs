@@ -56,7 +56,7 @@ namespace Real_TimeTaskManagement
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-              //  endpoints.MapHub<TaskHub>("/taskhub"); // add this line to map the hub endpoint
+                endpoints.MapHub<TaskHub>("/taskhub"); // add this line to map the hub endpoint
             });
 
             app.Run();

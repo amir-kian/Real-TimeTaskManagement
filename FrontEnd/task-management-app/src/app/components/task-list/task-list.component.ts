@@ -33,4 +33,11 @@ export class TaskListComponent implements OnInit {
     }
   }
 
+  public listenForTaskDeleted(): void {
+    this.signalRService.taskDeletedListener()
+      .subscribe((taskId: number) => {
+        console.log(`TaskDeleted event received: ${taskId}`);
+      });
+  }
+
 }
