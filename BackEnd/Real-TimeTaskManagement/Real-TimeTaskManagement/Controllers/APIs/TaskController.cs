@@ -15,14 +15,14 @@ namespace Real_TimeTaskManagement.Controllers.APIs
             _taskService = taskService;
         }
 
-        [HttpGet(Name = "GetTasks")]
+        [HttpGet( "GetTasks")]
         public async Task<ActionResult<IEnumerable<Models.Task>>> GetTasks()
         {
             var tasks = await _taskService.GetAllTasksAsync();
             return Ok(tasks);
         }
 
-        [HttpGet("{id}",Name = "GetTask")]
+        [HttpGet("GetTask/{id}")]
         public async Task<ActionResult<Models.Task>> GetTask(int id)
         {
             var task = await _taskService.GetTaskByIdAsync(id);
@@ -34,18 +34,17 @@ namespace Real_TimeTaskManagement.Controllers.APIs
             return Ok(task);
         }
 
-        [HttpPost(Name = "CreateTask")]
+        [HttpPost("CreateTask")]
         public async Task<ActionResult<Models.Task>> CreateTask(Models.Task task)
         {
             await _taskService.CreateTaskAsync(task);
             return Ok(task);
         }
 
-        [HttpPut("{id}",Name = "UpdateTask")]
+        [HttpPut("UpdateTask/{id}")]
         public async Task<IActionResult> UpdateTask(int id, Models.Task task)
         {
-            if (id != task.Id)
-            {
+            if (id != task.Id)          {
                 return BadRequest();
             }
 
@@ -53,7 +52,7 @@ namespace Real_TimeTaskManagement.Controllers.APIs
             return NoContent();
         }
 
-        [HttpDelete("{id}",Name = "DeleteTask")]
+        [HttpDelete("DeleteTask/{id}")]
         public async Task<IActionResult> DeleteTask(int id)
         {
             var task = await _taskService.GetTaskByIdAsync(id);

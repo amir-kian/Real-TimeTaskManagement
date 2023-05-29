@@ -1,0 +1,27 @@
+<a routerLink="/add">Create Task +</a>
+
+<table>
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>description</th>
+        <th>dueDate</th>
+        <th>priority</th>
+        <th>status</th>
+        <th>operators</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <td>{{ task.name }}</td>
+        <td>{{ task.description }}</td>
+        <td>{{ task.dueDate }}</td>
+        <td>{{ task.priority }}</td>
+        <td>{{ task.status }}</td>
+        <td>
+            <!-- <a  class="" (click)="EditItem(item.id)"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+            <a  class="ms-2" (click)="LogicalDeleteFormula(item.id)"> <i class="fa fa-trash" aria-hidden="true"></i></a> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>

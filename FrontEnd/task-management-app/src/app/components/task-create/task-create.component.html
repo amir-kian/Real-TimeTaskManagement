@@ -1,0 +1,35 @@
+<div *ngIf="isSaved">Task created successfully!</div>
+<div *ngIf="!isSaved">Error creating task!</div>
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name">
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <input type="text" id="description" formControlName="description">
+    </div>
+    <div>
+      <label for="dueDate">Due Date:</label>
+      <input type="date" id="dueDate" formControlName="dueDate">
+    </div>
+    <div>
+      <label for="priority">Priority:</label>
+      <select id="priority" formControlName="priority">
+        <option value="">--Select Priority--</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+    </div>
+    <div>
+      <label for="status">Status:</label>
+      <select id="status" formControlName="status">
+        <option value="">--Select Status--</option>
+        <option value="New">New</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+    </div>
+    <button type="submit">Create Task</button>
+  </form>
