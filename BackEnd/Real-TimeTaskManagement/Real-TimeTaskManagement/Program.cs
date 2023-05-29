@@ -26,6 +26,16 @@ namespace Real_TimeTaskManagement
             builder.Services.AddScoped<ITaskRepository, TaskRepository>();
             builder.Services.AddScoped<ITaskService, TaskService>();
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin()
+                           .AllowAnyHeader()
+                           .AllowAnyMethod();
+                });
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -34,6 +44,7 @@ namespace Real_TimeTaskManagement
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            app.UseCors();
 
             app.UseHttpsRedirection();
             app.UseRouting();

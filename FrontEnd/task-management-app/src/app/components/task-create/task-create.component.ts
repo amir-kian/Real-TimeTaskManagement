@@ -9,7 +9,7 @@ import { TaskService } from 'src/app/services/task.service';
 })
 export class TaskCreateComponent implements OnInit {
 
-  isSaved: boolean = false;
+  ResultMessage!: string ;
   taskForm!: FormGroup ;
 
 
@@ -36,9 +36,9 @@ export class TaskCreateComponent implements OnInit {
   onSubmit() {
     const newTask = this.taskForm?.value;
     this.taskService.createTask(newTask).subscribe(() => {
-      this.isSaved = true;
+      this.ResultMessage = "Task created successfully!";
     }, () => {
-      this.isSaved = false;
+      this.ResultMessage = "Error creating task!";
     });
   }
 
