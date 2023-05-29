@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { TaskService } from 'src/app/services/task.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class TaskCreateComponent implements OnInit {
   taskForm!: FormGroup ;
 
 
-  constructor(private formBuilder: FormBuilder,private taskService: TaskService) { 
+  constructor(private formBuilder: FormBuilder,private taskService: TaskService,private router: Router) { 
     this.taskForm = this.formBuilder.group({
       name: new FormControl(''),
       description: new FormControl(''),
@@ -40,6 +41,9 @@ export class TaskCreateComponent implements OnInit {
     }, () => {
       this.ResultMessage = "Error creating task!";
     });
+  }
+  GoBackToList() {
+    this.router.navigate(['/list']);
   }
 
 }

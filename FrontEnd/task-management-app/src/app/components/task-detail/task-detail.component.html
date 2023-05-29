@@ -1,1 +1,25 @@
-<p>task-detail works!</p>
+
+<div *ngIf="task">
+    <div class="container mt-4">
+        <div class="row">
+          <div class="col-12">
+            <button class="btn btn-secondary" (click)="GoBackToList()">Back to List</button>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h2>{{ task.name }}</h2>
+              </div>
+              <div class="card-body">
+                <p class="card-text">{{ task.description }}</p>
+                <p class="card-text"><strong>Due date:</strong> {{ task.dueDate | date:'mediumDate' }}</p>
+                <p class="card-text"><strong>Priority:</strong> {{ task.priority }}</p>
+                <p class="card-text"><strong>Status:</strong> {{ task.status }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>

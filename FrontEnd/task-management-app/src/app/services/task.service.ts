@@ -12,23 +12,24 @@ export class TaskService {
   constructor(private _http: HttpClient) { }
 
   getTasks(): Observable<TaskModel[]> {
-    return this._http.get<TaskModel[]>(`${environment.apiUrl}/Task/GetTasks`);
+    return this._http.get<TaskModel[]>(`${environment.apiUrl}/api/Task/GetTasks`);
   }
 
   getTask(id: number): Observable<TaskModel> {
-    return this._http.get<TaskModel>(`${environment.apiUrl}/Task/GetTask/${id}`);
+    return this._http.get<TaskModel>(`${environment.apiUrl}/api/Task/GetTask/${id}`);
   }
 
   createTask(task: TaskModel): Observable<TaskModel> {
-    return this._http.post<TaskModel>(`${environment.apiUrl}/Task/CreateTask`, task);
+    debugger;
+    return this._http.post<TaskModel>(`${environment.apiUrl}/api/Task/CreateTask`, task);
   }
 
   updateTask(task: TaskModel): Observable<void> {
-    return this._http.put<void>(`${environment.apiUrl}/Task/UpdateTask/${task.id}`, task);
+    return this._http.put<void>(`${environment.apiUrl}/api/Task/UpdateTask/${task.id}`, task);
   }
 
   deleteTask(id: number): Observable<void> {
-    return this._http.delete<void>(`${environment.apiUrl}/Task/DeleteTask/${id}`);
+    return this._http.delete<void>(`${environment.apiUrl}/api/Task/DeleteTask/${id}`);
   }
 
 }

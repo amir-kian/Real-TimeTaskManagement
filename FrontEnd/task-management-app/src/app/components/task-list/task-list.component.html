@@ -16,16 +16,13 @@
     <tr *ngFor="let task of tasks">
       <td>{{ task.name }}</td>
       <td>{{ task.description }}</td>
-      <td>{{ task.dueDate }}</td>
+      <td>{{ task.dueDate | date:'mediumDate'}}</td>
       <td>{{ task.priority }}</td>
       <td>{{ task.status }}</td>
       <td>
-        <!-- <a class="btn btn-outline-primary" (click)="EditItem(item.id)">
-          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-        </a>
-        <a class="btn btn-outline-danger ms-2" (click)="LogicalDeleteFormula(item.id)">
-          <i class="fa fa-trash" aria-hidden="true"></i>
-        </a> -->
+        <a [routerLink]="['/tasks', task.id]">detials</a>
+        <button class="btn btn-outline-danger ms-2" (click)="deleteTask(task.id)">Delete</button>
+        <button class="btn btn-outline-primary ms-2" [routerLink]="['/edit', task.id]">Edit</button>
       </td>
     </tr>
   </tbody>
