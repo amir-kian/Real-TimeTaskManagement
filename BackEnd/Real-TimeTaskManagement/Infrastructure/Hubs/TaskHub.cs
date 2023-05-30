@@ -15,6 +15,6 @@ public async Task TaskDeleted(int taskId)
     }
     public async Task TaskCreated( )
     {
-        await Clients.All.SendAsync("Created");
+        await Clients.All.SendAsync("TaskCreated");
     }
 }

@@ -25,12 +25,20 @@ export class TaskListComponent implements OnInit,AfterViewInit  {
 
   ngOnInit(): void {
 
+    this.refreshData();
+
+
+  }
+   refreshData() {
     this.taskService.getTasks().subscribe((data: TaskModel[]) => {
       this.tasks = data;
     });
   }
   ngAfterViewInit(): void {
        this.signalRService.startConnection();
+       this.listenForTaskDeleted();
+       this.listenForTaskUpdated();
+      this.listenForTaskCreated();
        console.log("this.signalRService.hubConnection.state ",this.signalRService.hubConnection.state );
 
   }
@@ -49,6 +57,25 @@ export class TaskListComponent implements OnInit,AfterViewInit  {
       }
     }
   }
+  public listenForTaskCreated(): void {
+    debugger;
+    this.signalRService.taskCreatedListener().subscribe(() => {
+      this.refreshData();
+    });
+  }
+  public listenForTaskDeleted(): void {
+    debugger;
+
+    this.signalRService.taskDeletedListener().subscribe((taskId: number) => {
+      this.refreshData();
+        });
+}
+public listenForTaskUpdated(): void {
+  debugger;
+  this.signalRService.taskUpdatedListener().subscribe(taskId => {
+    this.refreshData();
+});
+}
 
 
 

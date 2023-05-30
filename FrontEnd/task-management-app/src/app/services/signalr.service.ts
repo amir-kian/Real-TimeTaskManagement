@@ -109,24 +109,23 @@ export class SignalrService {
     }
   }
 
-  taskCreatedListener(): Observable<number> {
+  taskCreatedListener(): Observable<void> {
     debugger;
     try {
-      return new Observable<number>(observer => {
+      return new Observable<void>(observer => {
         this.hubConnection.on('TaskCreated', () => {
           observer.next();
         });
       });
     } catch (error) {
       console.error(`Error while listening for TaskCreated event on SignalR hub connection: ${error}`);
-      return new Observable<number>();
+      return new Observable<void>();
     }
   }
   public listenForTaskCreated(): void {
     debugger;
-    this.taskCreatedListener().subscribe(taskId => {
-      alert(`TaskCreated event received: ${taskId}`);
-
+    this.taskCreatedListener().subscribe(() => {
+      alert('TaskCreated event received');
     });
   }
 

@@ -3695,19 +3695,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Techno Clite\\.nuget\\packages\\": {}
+    "C:\\Users\\javah\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Development\\RealTimeTaskManagment\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Services\\Services.csproj",
+      "projectUniqueName": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "D:\\Development\\RealTimeTaskManagment\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Services\\Services.csproj",
-      "packagesPath": "C:\\Users\\Techno Clite\\.nuget\\packages\\",
-      "outputPath": "D:\\Development\\RealTimeTaskManagment\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Services\\obj\\",
+      "projectPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Services\\Services.csproj",
+      "packagesPath": "C:\\Users\\javah\\.nuget\\packages\\",
+      "outputPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Techno Clite\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\javah\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3721,8 +3721,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Development\\RealTimeTaskManagment\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Repositories\\Repositories.csproj": {
-              "projectPath": "D:\\Development\\RealTimeTaskManagment\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Repositories\\Repositories.csproj"
+            "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Repositories\\Repositories.csproj": {
+              "projectPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Repositories\\Repositories.csproj"
             }
           }
         }
@@ -3752,7 +3752,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   },
