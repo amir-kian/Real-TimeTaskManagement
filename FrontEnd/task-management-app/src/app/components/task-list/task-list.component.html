@@ -9,6 +9,36 @@
 <div *ngIf="showTaskUpdatedMessage">
   <p>Task was Updated.</p>
 </div>
+<div>
+  <div class="form-group">
+    <label for="priority-select">Filter by priority:</label>
+    <select id="priority-select" class="form-control" [(ngModel)]="selectedPriority">
+      <option value="">All</option>
+      <option value="1">High</option>
+      <option value="2">Medium</option>
+      <option value="3">Low</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label for="status-select">Filter by status:</label>
+    <select id="status-select" class="form-control" [(ngModel)]="selectedStatus">
+      <option value="">All</option>
+      <option value="1">New</option>
+      <option value="2">In Progress</option>
+      <option value="3">Completed</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label for="due-date-input">Filter by due date:</label>
+    <input id="due-date-input" type="text" class="form-control" [(ngModel)]="dueDateFilter">
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary" (click)="filterTasks()">Filter</button>
+  </div>
+</div>
+
 <table class="table">
   <thead>
     <tr>
@@ -21,8 +51,10 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let task of tasks">
-      <td>{{ task.name }}</td>
+    <ng-container *ngFor="let task of tasks">
+      <tr *ngIf="!dueDateFilter || isDueDateMatch(task.dueDate, dueDateFilter)">
+      
+          <td>{{ task.name }}</td>
       <td>{{ task.description }}</td>
       <td>{{ task.dueDate | date:'mediumDate'}}</td>
       <td>{{ task.priority }}</td>
@@ -33,5 +65,7 @@
         <button class="btn btn-outline-primary ms-2" [routerLink]="['/edit', task.id]">Edit</button>
       </td>
     </tr>
+  </ng-container>
+
   </tbody>
 </table>

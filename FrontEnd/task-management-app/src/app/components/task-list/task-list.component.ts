@@ -4,7 +4,6 @@ import { TaskService } from '../../services/task.service';
 import { SignalrService  } from '../../services/signalr.service';
 import { HubConnectionState } from '@microsoft/signalr';
 
-
 @Component({
   selector: 'app-task-list',
   templateUrl: './task-list.component.html',
@@ -15,11 +14,14 @@ export class TaskListComponent implements OnInit,AfterViewInit  {
   constructor(private taskService: TaskService,private signalRService: SignalrService) { }
 
 
+  Originaltasks: TaskModel[] | undefined;
   tasks: TaskModel[] | undefined;
   public showTaskDeletedMessage = false;
   public showTaskUpdatedMessage = false;
   public showTaskCreatedMessage = false;
-
+  selectedPriority: string = '';
+  selectedStatus: string = '';
+  dueDateFilter: string = '';
 
 
 
@@ -27,11 +29,11 @@ export class TaskListComponent implements OnInit,AfterViewInit  {
 
     this.refreshData();
 
-
   }
    refreshData() {
     this.taskService.getTasks().subscribe((data: TaskModel[]) => {
       this.tasks = data;
+      this.Originaltasks = data;
     });
   }
   ngAfterViewInit(): void {
@@ -57,6 +59,27 @@ export class TaskListComponent implements OnInit,AfterViewInit  {
       }
     }
   }
+  isDueDateMatch(dueDate: Date, filter: string): boolean {
+    if (!filter) {
+      return true;
+    }
+  
+    
+    const formattedDueDate = dueDate.toDateString();
+    const formattedFilter = new Date(filter).toDateString();
+  
+    return formattedDueDate === formattedFilter;
+  }
+
+  filterTasks():void {
+    debugger;
+    this.tasks = this.Originaltasks!.filter(task => {
+      return (!this.selectedPriority || task.priority === Number( this.selectedPriority))
+        && (!this.selectedStatus || task.status === this.selectedStatus)
+        && (!this.dueDateFilter || this.isDueDateMatch(new Date(task.dueDate), this.dueDateFilter));
+    });
+  }
+
   public listenForTaskCreated(): void {
     debugger;
     this.signalRService.taskCreatedListener().subscribe(() => {
