@@ -1,6 +1,9 @@
 
 <a routerLink="/add" class="btn btn-primary mb-3 my-3">Create Task +</a>
 
+<div *ngIf="showTaskDeletedMessage">
+    <p>Task deleted.</p>
+</div>
 <table class="table">
   <thead>
     <tr>

@@ -7,4 +7,9 @@ public class TaskHub : Hub
     {
         await Clients.All.SendAsync("TaskDeleted", taskId);
     }
+    public async Task TaskUpdated(int taskId)
+    {
+        await Clients.All.SendAsync("TaskUpdated", taskId);
+    }
+
 }

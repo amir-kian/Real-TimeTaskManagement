@@ -14,6 +14,7 @@ export class TaskListComponent implements OnInit {
   constructor(private taskService: TaskService,private signalRService: SignalrService) { }
 
   tasks: TaskModel[] | undefined;
+  public showTaskDeletedMessage = false;
 
 
   ngOnInit(): void {
@@ -24,6 +25,7 @@ export class TaskListComponent implements OnInit {
 
   }
   deleteTask(taskId: number) {
+    debugger;
     if (confirm('Are you sure you want to delete this task?')) {
       this.taskService.deleteTask(taskId).subscribe(() => {
         this.tasks = this.tasks!.filter(task => task.id !== taskId);
@@ -34,10 +36,12 @@ export class TaskListComponent implements OnInit {
   }
 
   public listenForTaskDeleted(): void {
+    debugger;
     this.signalRService.taskDeletedListener()
-      .subscribe((taskId: number) => {
-        console.log(`TaskDeleted event received: ${taskId}`);
-      });
-  }
+        .subscribe((taskId: number) => {
+            console.log(`TaskDeleted event received: ${taskId}`);
+            this.showTaskDeletedMessage = true;
+        });
+}
 
 }
