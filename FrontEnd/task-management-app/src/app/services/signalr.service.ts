@@ -14,12 +14,12 @@ export class SignalrService {
 
   constructor() {
     try {
+      this.hubConnection = new signalR.HubConnectionBuilder().withUrl(`${environment.apiUrl}/taskhub`).build();
+
        this.listenForTaskDeleted();
        this.listenForTaskUpdated();
       this.listenForTaskCreated();
-      this.hubConnection = new signalR.HubConnectionBuilder()
-        .withUrl(`${environment.apiUrl}/taskhub`)
-        .build();
+
     } catch (error) {
       console.error(`Error while creating SignalR hub connection: ${error}`);
     }
@@ -49,6 +49,7 @@ export class SignalrService {
   }
 
   taskDeleted(taskId: number) {
+    debugger;
     try {
       this.hubConnection.invoke('TaskDeleted', taskId)
         .then(() => console.log(`TaskDeleted event sent: ${taskId}`))
@@ -59,7 +60,10 @@ export class SignalrService {
   }
 
   taskDeletedListener(): Observable<number> {
+    debugger;
+
     try {
+
       return new Observable<number>(observer => {
         this.hubConnection.on('TaskDeleted', (taskId: number) => {
           observer.next(taskId);
@@ -128,6 +132,7 @@ export class SignalrService {
 
   public listenForTaskDeleted(): void {
     debugger;
+
     this.taskDeletedListener().subscribe((taskId: number) => {
             alert(`TaskDeleted event received: ${taskId}`);
         });
