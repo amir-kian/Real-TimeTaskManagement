@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.SignalR;
 
 public class TaskHub : Hub
 {
-    public async Task TaskDeleted(int taskId)
+
+
+public async Task TaskDeleted(int taskId)
     {
         await Clients.All.SendAsync("TaskDeleted", taskId);
     }
@@ -11,5 +13,8 @@ public class TaskHub : Hub
     {
         await Clients.All.SendAsync("TaskUpdated", taskId);
     }
-
+    public async Task TaskCreated( )
+    {
+        await Clients.All.SendAsync("Created");
+    }
 }

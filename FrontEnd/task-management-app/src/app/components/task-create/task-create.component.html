@@ -1,5 +1,8 @@
 <div  *ngIf="ResultMessage !== null">{{ ResultMessage }}</div>
 <button class="btn btn-defualt" (click)="GoBackToList()">Back to List</button>
+<div *ngIf="showTaskCreatedMessage">
+  <p>Task was Created.</p>
+</div>
 <form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="mt-3">
   <div class="mb-3">
     <label for="name" class="form-label">Name:</label>

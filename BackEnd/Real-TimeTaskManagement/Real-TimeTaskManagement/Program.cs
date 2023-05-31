@@ -1,4 +1,5 @@
 using Infrastructure;
+using Microsoft.AspNet.SignalR.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Repositories;
 using Repositories.Interfaces;
@@ -30,14 +31,17 @@ namespace Real_TimeTaskManagement
             {
                 options.AddDefaultPolicy(builder =>
                 {
-                    builder.WithOrigins("http://localhost:4200")
+                   // builder.WithOrigins("*")
+                            builder.WithOrigins("http://localhost:4200")
                            .AllowAnyHeader()
                            .AllowAnyMethod()
-                           .AllowCredentials();
+                            .AllowCredentials();
                 });
             });
-            builder.Services.AddSignalR();
-
+            builder.Services.AddSignalR(e => {
+                e.MaximumReceiveMessageSize = 102400000;
+                e.EnableDetailedErrors = true;
+            });
 
             var app = builder.Build();
 
