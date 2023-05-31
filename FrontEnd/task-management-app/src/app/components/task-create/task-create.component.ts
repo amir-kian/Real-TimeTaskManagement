@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { SignalrService } from 'src/app/services/signalr.service';
 import { TaskService } from 'src/app/services/task.service';
 import { HubConnectionState } from '@microsoft/signalr';
+import { HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-task-create',
@@ -21,15 +22,21 @@ export class TaskCreateComponent implements OnInit, AfterViewInit {
 
   ResultMessage = '';
   public showTaskCreatedMessage = false;
+  authenticated = false;
+
+
 
   constructor(
     private formBuilder: FormBuilder,
     private taskService: TaskService,
     private router: Router,
     private signalrService: SignalrService
-  ) {}
+  ) { }
 
   ngOnInit() {
+debugger;
+    this.CheckAuth();
+
     this.taskForm = this.formBuilder.group({
       name: ['', Validators.required],
       description: ['', Validators.required],
@@ -39,12 +46,22 @@ export class TaskCreateComponent implements OnInit, AfterViewInit {
     });
   }
 
+  private CheckAuth() {
+    const token = localStorage.getItem('token');
+    if (token)
+      this.authenticated = true;
+
+    else
+      this.router.navigateByUrl('/login');
+  }
+
   ngAfterViewInit(): void {
     this.signalrService.startConnection();
   }
 
   onSubmit() {
     debugger;
+
     if (this.taskForm.invalid) {
       return;
     }

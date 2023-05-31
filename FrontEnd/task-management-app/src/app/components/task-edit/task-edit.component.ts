@@ -15,6 +15,7 @@ export class TaskEditComponent implements OnInit {
   task!: TaskModel;
   ResultMessage!: string ;
   public showTaskUpdatedMessage = false;
+  authenticated: boolean=false;
 
   constructor(
     private route: ActivatedRoute,
@@ -26,6 +27,8 @@ export class TaskEditComponent implements OnInit {
 
 
   ngOnInit() {
+    this.CheckAuth();
+   
     this.taskForm = this.fb.group({
       name: [''],
       description: [''],
@@ -39,6 +42,14 @@ export class TaskEditComponent implements OnInit {
       this.task = task;
       this.taskForm.patchValue(task);
     });
+  }
+  private CheckAuth() {
+    const token = localStorage.getItem('token');
+    if (token)
+      this.authenticated = true;
+
+    else
+      this.router.navigateByUrl('/login');
   }
 
   onSubmit() {

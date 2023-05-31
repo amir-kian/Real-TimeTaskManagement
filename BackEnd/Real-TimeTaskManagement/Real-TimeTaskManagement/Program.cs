@@ -1,10 +1,14 @@
 using Infrastructure;
 using Microsoft.AspNet.SignalR.Hosting;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 using Repositories;
 using Repositories.Interfaces;
 using Services;
 using Services.Interfaces;
+using System.Text;
 
 namespace Real_TimeTaskManagement
 {
@@ -13,6 +17,25 @@ namespace Real_TimeTaskManagement
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            var tokenKey = builder.Configuration.GetValue<string>("Jwt:Key");
+            var tokenIssuer = builder.Configuration.GetValue<string>("Jwt:Issuer");
+            var tokenAudience = builder.Configuration.GetValue<string>("Jwt:Audience");
+
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateIssuerSigningKey = true,
+            ValidateLifetime = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenKey)),
+            ValidIssuer = tokenIssuer,
+            ValidAudience = tokenAudience
+        };
+    });
 
             // Add services to the container.
 

@@ -152,3 +152,4 @@ D:\Development\RealTimeTaskManagment\Real-TimeTaskManagement\BackEnd\Real-TimeTa
 D:\Development\RealTimeTaskManagment\Real-TimeTaskManagement\BackEnd\Real-TimeTaskManagement\Real-TimeTaskManagement\obj\Debug\net6.0\Real-TimeTaskManagement.pdb
 D:\Development\RealTimeTaskManagment\Real-TimeTaskManagement\BackEnd\Real-TimeTaskManagement\Real-TimeTaskManagement\obj\Debug\net6.0\Real-TimeTaskManagement.genruntimeconfig.cache
 D:\Development\RealTimeTaskManagment\Real-TimeTaskManagement\BackEnd\Real-TimeTaskManagement\Real-TimeTaskManagement\obj\Debug\net6.0\ref\Real-TimeTaskManagement.dll
+E:\development\Real-TimeTaskManagement\Real-TimeTaskManagement\BackEnd\Real-TimeTaskManagement\Real-TimeTaskManagement\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -14,6 +14,7 @@ import { TaskListComponent } from './components/task-list/task-list.component';
 import { TaskDetailComponent } from './components/task-detail/task-detail.component';
 import { TaskCreateComponent } from './components/task-create/task-create.component';
 import { TaskEditComponent } from './components/task-edit/task-edit.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { TaskEditComponent } from './components/task-edit/task-edit.component';
     TaskDetailComponent,
     TaskCreateComponent,
     TaskEditComponent,
+    LoginComponent,
     
   ],
   imports: [

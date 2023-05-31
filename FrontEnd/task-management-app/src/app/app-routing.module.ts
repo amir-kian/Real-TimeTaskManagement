@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './components/login/login.component';
 import { TaskCreateComponent } from './components/task-create/task-create.component';
 import { TaskDetailComponent } from './components/task-detail/task-detail.component';
 import { TaskEditComponent } from './components/task-edit/task-edit.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'edit/:id', component: TaskEditComponent },
   { path: 'add', component: TaskCreateComponent }, 
   { path: 'tasks/:id', component: TaskDetailComponent },
+  { path: 'login', component: LoginComponent },
 
 ];
 
