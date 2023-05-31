@@ -32,7 +32,6 @@ This will create the necessary tables and other database objects in your SQL Ser
 
 Start the API by running the following command:
 
-Copy
 dotnet run
 ```
 
@@ -42,7 +41,6 @@ Open a new command prompt or terminal window and navigate to the root directory 
 
 Run the following command to start the Angular app:
 
-Copy
 ng serve
 ```
 
@@ -56,8 +54,8 @@ If you encounter any issues while running this project, try the following steps:
 Make sure you have installed all the required software and dependencies.
 Check the console output for error messages or warnings.
 Make sure the connection string in appsettings.json is correct.
-Make sure the API is running on the correct port (5000 by default).
-Make sure the Angular app is running on the correct port (4200 by default).
+Make sure the API is running on the correct port (7240 by default).
+Make sure the Angular app is running on the correct port (7240 by default).
 Try clearing your browser cache and restarting the app.
 Credits
-This project was created by [Your Name]. If you have any questions or feedback, please contact me at [Your Email].
+This project was created by Amir Hossein Javaheri Kian. If you have any questions or feedback, please contact me at javaheri_kian@yahoo.com.
