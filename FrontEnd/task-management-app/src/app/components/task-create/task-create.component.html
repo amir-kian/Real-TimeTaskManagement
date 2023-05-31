@@ -1,9 +1,19 @@
-<div  *ngIf="ResultMessage !== null">{{ ResultMessage }}</div>
-<button class="btn btn-defualt" (click)="GoBackToList()">Back to List</button>
+<div *ngIf="ResultMessage !== null">{{ ResultMessage }}</div>
+<button class="btn btn-default" (click)="GoBackToList()">Back to List</button>
 <div *ngIf="showTaskCreatedMessage">
-  <p>Task was Created.</p>
+  <p>Task was created.</p>
 </div>
 <form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="mt-3">
+  <div *ngIf="taskForm.invalid && (taskForm.dirty || taskForm.touched)">
+    <ul>
+      <li *ngIf="taskFormControls['name'].errors?.['required']">Name is required.</li>
+      <li *ngIf="taskFormControls['description'].errors?.['required']">Description is required.</li>
+      <li *ngIf="taskFormControls['dueDate'].errors?.['required']">Due date is required.</li>
+      <li *ngIf="taskFormControls['status'].errors?.['required']">status is required.</li>
+      <li *ngIf="taskFormControls['priority'].errors?.['required']">priority is required.</li>
+    </ul>
+  </div>
+
   <div class="mb-3">
     <label for="name" class="form-label">Name:</label>
     <input type="text" id="name" class="form-control" formControlName="name">
@@ -11,10 +21,12 @@
   <div class="mb-3">
     <label for="description" class="form-label">Description:</label>
     <input type="text" id="description" class="form-control" formControlName="description">
+
   </div>
   <div class="mb-3">
     <label for="dueDate" class="form-label">Due Date:</label>
     <input type="date" id="dueDate" class="form-control" formControlName="dueDate">
+
   </div>
   <div class="mb-3">
     <label for="priority" class="form-label">Priority:</label>
@@ -24,6 +36,7 @@
       <option value="2">Medium</option>
       <option value="3">Low</option>
     </select>
+
   </div>
   <div class="mb-3">
     <label for="status" class="form-label">Status:</label>
@@ -33,6 +46,7 @@
       <option value="2">In Progress</option>
       <option value="3">Completed</option>
     </select>
+
   </div>
   <button type="submit" class="btn btn-primary">Create Task</button>
 </form>

@@ -3760,19 +3760,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\javah\\.nuget\\packages\\": {}
+    "C:\\Users\\Techno Clite\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "D:\\Development\\RealTimeTaskManagment\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Infrastructure\\Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\javah\\.nuget\\packages\\",
-      "outputPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Infrastructure\\obj\\",
+      "projectPath": "D:\\Development\\RealTimeTaskManagment\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Infrastructure\\Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\Techno Clite\\.nuget\\packages\\",
+      "outputPath": "D:\\Development\\RealTimeTaskManagment\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\javah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Techno Clite\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3786,8 +3786,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Models\\Models.csproj": {
-              "projectPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Models\\Models.csproj"
+            "D:\\Development\\RealTimeTaskManagment\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Models\\Models.csproj": {
+              "projectPath": "D:\\Development\\RealTimeTaskManagment\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Models\\Models.csproj"
             }
           }
         }
@@ -3837,7 +3837,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   },

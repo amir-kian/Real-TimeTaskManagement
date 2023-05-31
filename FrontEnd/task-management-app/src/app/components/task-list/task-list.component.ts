@@ -22,6 +22,7 @@ export class TaskListComponent implements OnInit,AfterViewInit  {
   selectedPriority: string = '';
   selectedStatus: string = '';
   dueDateFilter: string = '';
+  ascendingOrder = true;
 
 
 
@@ -79,6 +80,30 @@ export class TaskListComponent implements OnInit,AfterViewInit  {
         && (!this.dueDateFilter || this.isDueDateMatch(new Date(task.dueDate), this.dueDateFilter));
     });
   }
+  sortTasks(column: string): void {
+    console.log('sortTasks called with column:', column);
+  
+    if (this.tasks) {
+      this.tasks.sort((a, b) => {
+        let aValue, bValue;
+        if (column === 'priority') {
+          aValue = a.priority;
+          bValue = b.priority;
+        } else {
+          aValue = new Date(a.dueDate);
+          bValue = new Date(b.dueDate);
+        }
+        if (aValue < bValue) {
+          return this.ascendingOrder ? -1 : 1;
+        } else if (aValue > bValue) {
+          return this.ascendingOrder ? 1 : -1;
+        }
+        return 0;
+      });
+      this.ascendingOrder = !this.ascendingOrder;
+    }
+  }
+   
 
   public listenForTaskCreated(): void {
     debugger;

@@ -3998,19 +3998,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\javah\\.nuget\\packages\\": {}
+    "C:\\Users\\Techno Clite\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\Real-TimeTaskManagement.csproj",
+      "projectUniqueName": "D:\\Development\\RealTimeTaskManagment\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\Real-TimeTaskManagement.csproj",
       "projectName": "Real-TimeTaskManagement",
-      "projectPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\Real-TimeTaskManagement.csproj",
-      "packagesPath": "C:\\Users\\javah\\.nuget\\packages\\",
-      "outputPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\obj\\",
+      "projectPath": "D:\\Development\\RealTimeTaskManagment\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\Real-TimeTaskManagement.csproj",
+      "packagesPath": "C:\\Users\\Techno Clite\\.nuget\\packages\\",
+      "outputPath": "D:\\Development\\RealTimeTaskManagment\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\javah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Techno Clite\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4024,14 +4024,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Infrastructure\\Infrastructure.csproj"
+            "D:\\Development\\RealTimeTaskManagment\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "D:\\Development\\RealTimeTaskManagment\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Infrastructure\\Infrastructure.csproj"
             },
-            "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Repositories\\Repositories.csproj": {
-              "projectPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Repositories\\Repositories.csproj"
+            "D:\\Development\\RealTimeTaskManagment\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Repositories\\Repositories.csproj": {
+              "projectPath": "D:\\Development\\RealTimeTaskManagment\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Repositories\\Repositories.csproj"
             },
-            "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Services\\Services.csproj": {
-              "projectPath": "E:\\development\\Real-TimeTaskManagement\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Services\\Services.csproj"
+            "D:\\Development\\RealTimeTaskManagment\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Services\\Services.csproj": {
+              "projectPath": "D:\\Development\\RealTimeTaskManagment\\Real-TimeTaskManagement\\BackEnd\\Real-TimeTaskManagement\\Services\\Services.csproj"
             }
           }
         }
@@ -4080,7 +4080,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   },
