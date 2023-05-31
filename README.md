@@ -48,6 +48,8 @@ This will start the Angular app on port 4200 by default.
 
 Open a web browser and navigate to http://localhost:4200 to view the app.
 
+Note that authentication is required to access the create and update pages, as well as the login page. To authenticate, use the username 'admin' and the password '123456'.
+
 Troubleshooting
 If you encounter any issues while running this project, try the following steps:
 
